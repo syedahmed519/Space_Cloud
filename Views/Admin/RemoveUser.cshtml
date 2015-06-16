@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "RemoveUser";
+}
+@model List<Term_Project.Models.SignUp>
+<body style="background-color:silver">
+    <div class="container">
+
+        <div class="row" style="margin-top:120px">
+            <div class=" col-xs-6 col-md-4"></div>
+            <div class=" col-xs-6 col-md-4">
+                <h3 style="font-family:'Book Antiqua'">Remove User Here</h3>
+            </div>
+            <div class=" col-xs-6 col-md-4"></div>
+
+        </div>
+
+        <form>
+
+            <div class="row" style="margin-top:30px">
+               <table border="1" width="100%" cellpadding="0" cellspacing="0">
+                   <tr>
+                       <th class="table-header-repeat line-left minwidth-1"  >User Id</th>
+                       <th class="table-header-repeat">First Name</th>
+                       <th>Last Name</th>
+                       <th>Email</th>
+                       <th>Action</th>
+                   </tr>
+                   
+                       @foreach(var i in Model)
+                       {
+                <tr>
+                    <td>@i.Id</td>
+                    <td>@i.Fname</td>
+                    <td>@i.Lname</td>
+                    <td>@i.Em</td>
+                    <td><a>@Html.ActionLink("Delete this user" , "DeleteUser" , new {id = i.Id})</a></td>
+                </tr>
+                        }
+
+                   
+               </table>
+
+
+            </div>
+
+
+
+        </form>
+    </div>
+</body>

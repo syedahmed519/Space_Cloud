@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<body>
+    <div style="position:absolute;z-index:3">
+        <img src="~/images/s7.jpg" />
+    </div>
+    <div style="position:absolute;z-index:3">
+        <h1 style="color: greenyellow">One place for everything in your life</h1>
+        <div class="form-group">
+            <a href="~/Admin" class="btn btn-info;" style="background-color:lightyellow; color:red;margin-left:1100px;margin-top:-100px">Admin Panel</a>
+            <a href="~/AboutCloud" class="btn btn-info;" style="background-color: lightyellow;color:red; margin-top: -100px">About Cloud</a>
+
+        </div>
+        <div class="row" style="margin-top:60px">
+            <div class=" col-xs-6 col-md-4"></div>
+
+            <div class=" col-xs-6 col-md-4">
+                <h3 style="color: darkblue">Sign In to s Drive</h3>
+            </div>
+
+
+
+        </div>
+
+
+        <form method="post" action="/Home/LogInU">
+
+            <div class="row">
+                <div class=" col-xs-6 col-md-4"></div>
+
+                <div class=" col-xs-6 col-md-4">
+                    <div class="form-group">
+                        <label><strong>Email address</strong></label>
+                        <input name="Em" type="email" class="form-control" id="InEmail" required="required" placeholder="Enter email">
+                        @ViewBag.Error
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class=" col-xs-6 col-md-4"></div>
+
+                <div class=" col-xs-6 col-md-4">
+                    <div class="form-group">
+                        <label><strong>Password</strong> </label>
+                        <input name="Pass" type="password" class="form-control" id="InPassword" required="required" placeholder="Password">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class=" col-xs-6 col-md-4"></div>
+
+                <div class=" col-xs-6 col-md-4">
+                    <div class="checkbox">
+                        <label style="color:yellow;font-size:medium">
+                            <input type="checkbox"> Keep me signed in
+                        </label>
+                        <button class="btn btn-default" style="background-color:skyblue;  font-size:26px;  margin-left:90px; font-size:larger;width:200px;color:darkorange" type="submit">Log In</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class=" col-xs-6 col-md-4"></div>
+
+                <div class=" col-xs-6 col-md-4">
+                    <div class="form-group" style="text-emphasis-style:filled">
+                        <label style="color:mistyrose">Don't have an ID?</label>
+                        <a href="~/User/SignUp" style="color:white"><strong>Create a new now.</strong></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class=" col-xs-6 col-md-4"></div>
+
+                <div class=" col-xs-6 col-md-4">
+                    <div class="form-group">
+
+                        <a href="~/User/ReSet">Forgot Id or Password</a>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+        <div class="pull-right" style="margin-top:115px">
+            <label style="color:lawngreen">Copyright 2015 Spaces Inc. All rights reserved.</label>
+
+        </div>
+    </div>
+</body>
+
+
